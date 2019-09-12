@@ -1,6 +1,6 @@
 # Boulder Fire Department - Incident Response 2015-2018
 
-<src="folium_maps/folium_header.png")
+<src="folium_maps/folium_header.png">
 
 ## Table of Contents
 
@@ -25,15 +25,15 @@ For this study, data concerning ambulance responses, data from 2019, as well as 
 
 Over the course of the four years investigated, the BFD responded to nearly 51.5 thousand incidents, which broke down nearly equally by year.
 
-<src="images/Incidents_per_Year.png>
+<src="images/Incidents_per_Year.png">
 
 Of those incidents, the vast majority were responses to Emergency Medical Service (EMS) calls.
 
-<src="images/Average_Incidents_per_Program_Area.png>
+<src="images/Average_Incidents_per_Program_Area.png">
 
 When the incidents were viewed by month, an interesting pattern appeared.
 
-<src="images/Incidents_per_Month_Averaged.png>
+<src="images/Incidents_per_Month_Averaged.png">
 
 ## When are incidents occurring?
 
@@ -41,7 +41,7 @@ When the incidents were viewed by month, an interesting pattern appeared.
 
 I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing.
 
-<src="images/kde_plot_DoW_Year.png>
+<src="images/kde_plot_DoW_Year.png">
 
 With this kernel density estimation (KDE) figure, I was able to confirm that the August-October are the months of the year that BFD tends to get the most calls. So what are those incidents that are inflating those months and where are they occurring?
 
