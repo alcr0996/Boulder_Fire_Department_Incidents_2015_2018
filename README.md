@@ -37,7 +37,7 @@ Of those incidents, the vast majority were responses to Emergency Medical Servic
 
 When the incidents were viewed by month, an interesting pattern appeared.
 
-<img alt="Incidents per month averaged" src='images/Incidents_per_Month_Averaged.png' width=400>
+<img alt="Incidents per month averaged" src='images/incidents_per_month_averaged.png' width=400>
 
 ## What now?
 
@@ -49,7 +49,7 @@ With this kernel density estimation (KDE) figure, I was able to confirm that the
 
 While this next figure has a lot going on, it demonstrates that during the months of August-October, you can see the same pattern when looking at EMS calls that was witnessed in the prior Incidents per Month figure.
 
-<img alt="Average_Incidents_per_Program_area.png" src='Average_Incidents_per_Program_area.png' width=400> 
+<img alt="Average_Incidents_per_Program_area" src='average_incidents_per_program.png' width=400> 
 
 Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same.
 
