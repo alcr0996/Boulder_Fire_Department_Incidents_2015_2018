@@ -69,17 +69,17 @@ plt.xticks(rotation=90)
 if __name__=="__main__":
 
 # Edit MatPlotLib Parameters
-        plt.rcParams.update({'font.size': 20})
-        plt.style.use('ggplot')
+        # plt.rcParams.update({'font.size': 20})
+        
 
 # Import data
-        df = pd.read_csv('data/BFD_fire.csv')
+        # df = pd.read_csv('data/BFD_fire.csv')
 
-        group_month_area = df.groupby(['month','PROGRAMAREA'])
-        incidents_year_month_area = group_month_area['ID'].count()
-        height = incidents_year_month_area
-        x = height.index
-        fig, ax = plt.subplots()
-        phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program Area',
-                        'Average Total Incidents')
-        plt.xticks(rotation=90)
+        # group_month_area = df.groupby(['month','PROGRAMAREA'])
+        # incidents_year_month_area = group_month_area['ID'].count()
+        # height = incidents_year_month_area
+        # x = height.index
+        # fig, ax = plt.subplots()
+        # phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program Area',
+        #                 'Average Total Incidents')
+        # plt.xticks(rotation=90)

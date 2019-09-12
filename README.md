@@ -1,5 +1,5 @@
 # Boulder Fire Department - Incident Response 2015-2018
-![Incidents around Boulder, CO](folium_maps/folium_header.png)
+![Incidents around Boulder, CO](images/folium_header.png)
 
 
 ## Table of Contents
@@ -33,31 +33,38 @@ Of those incidents, the vast majority were responses to Emergency Medical Servic
 
 ## When are incidents occurring?
 
-<img alt="KDE of hour and day" src='images/kde_plot_DoW_Year.png' width=400> 
+I was curious to see when the BFD receives the highest volume of calls over the course of the week. I anticipated seeing a higher concentration of calls from Thursday-Saturday, with noticeable peaks in the evenings. As demonstrated in the following kernal density estimation (KDE), those assumptions do not prove to be true. There is a noticeable trend as the week continues for there to be more incidents in the very early morning (i.e. 12-2AM), but there appears to be a higher concentration of incidents between normal wakeful hours from Sunday-Thursday.
 
-When the incidents were viewed by month, an interesting pattern appeared.
+<img alt="KDE of hour and day" src='images/kde_plot_DoW_Year.png' width=500> 
+
+Next I wanted to view the the incidents per month to ascertain if there were more incidents in any particular season. When investigating monthly incident rates, an interesting pattern appeared.
 
 <img alt="Incidents per month averaged" src='images/incidents_per_month_averaged.png' width=400>
 
 ## What now?
 
-I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing.
+I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing. With this next KDE, I was able to confirm that August-October are the months of the year that BFD tends to get the most calls.
 
-<img alt="Results of the complete segmentation of a single brain" src='images/kde_plot_Month_Year.png' width=400> 
+<img alt="KDE plot Month Year" src='images/kde_plot_Month_Year.png' width=500> 
 
-With this kernel density estimation (KDE) figure, I was able to confirm that the August-October are the months of the year that BFD tends to get the most calls. So what are those incidents that are inflating those months and where are they occurring?
+So what are those incidents that are inflating those months and where are they occurring? To address this question, I broke down incidents by response area per month.
 
-While this next figure has a lot going on, it demonstrates that during the months of August-October, you can see the same pattern when looking at EMS calls that was witnessed in the prior Incidents per Month figure.
+While this next figure has a lot going on, it demonstrates that during the months of August-October, you can see the same pattern when looking at EMS calls that was witnessed in the prior Incidents per Month figure. This led me to believe that during the months in question, EMS incidents were going to make up a larger percentage of total incidents.
 
-<img alt="Average_Incidents_per_Program_area" src='average_incidents_per_program.png' width=400> 
+<img alt="Average Incidents per Program_area" src='images/average_incidents_per_program.png' width=600> 
 
-Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same.
+Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same as demonstrated in another figure not included here.
 
 ### So where are these extra incidents occurring?
 
-Instead of trying to pin down exact latitude and longitudes, a heat map seemed appropriate for this task.
+Instead of trying to use the provided latitude and longitude for each incident, and taking the time to reseach each closest intersection or landmark, I decided to utilize a heat map illuminate the answer.
 
-<img alt="BFD_heatmap" src='BFD_hmap.html' width=400> 
+<img alt="BFD_heatmap" src='images/BFD_heatmap.png' width=600>
+
+This map has all incidents from 2015-2018 plotted. While you cannot interact with it here, the file has been included within the folium_maps folder of this repository.
+
+What it is demonstrating is that while the BFD clearly responds to incidents all over Boulder, the areas of highest concentration are in the general downtown vicinity, centered around Pearl Street, around the University of Colorado at Boulder and nearby college housing, and with a few other notable intersections along 28th St., 30th St., and Broadway Ave.
+
 
 
 

@@ -31,6 +31,11 @@ def line_plot(x, y, ax, title=False, xlabel=False, ylabel=False):
 
 # Plotting function built for time interval vs. response time
 def kde_plot(x, y, xlabel=False, ylabel=False):
+    """
+    Seaborn (sns) jointplot has many options, this
+    is specifcally for kernel density estimation.
+    Have to set xlim and ylim manually each time.
+    """
     ax = sns.set(style="ticks")
     a = sns.jointplot(x, y, kind="kde", color='brown', ylim=(-.5,12.5))
     a.set_axis_labels(xlabel, ylabel, fontsize=18)
