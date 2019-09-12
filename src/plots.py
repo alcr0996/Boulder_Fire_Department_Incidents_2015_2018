@@ -44,7 +44,7 @@ fig, ax = plt.subplots()
 phf.bar_plot(x, height, ax, 'Average Incidents per Program Area (2015-2018)', 'Program Area',
                         'Total Incidents (Avg)')
 
-# # % Program area per year per month
+# % Program area per year per month
 group_month_area = df.groupby(['month','PROGRAMAREA'])
 group_month = df.groupby('month')['ID'].count()
 incidents_month_area_percent = group_month_area['ID'].count()/group_month
@@ -55,7 +55,7 @@ phf.bar_plot(x, height, ax, 'Percent Incidents per Program Area', 'Month/Program
                         'Total Incidents (Avg)')
 plt.xticks(rotation=90)
 
-# # Count Program area per month
+# Count Program area per month
 group_month_area = df.groupby(['month','PROGRAMAREA'])
 incidents_year_month_area = group_month_area['ID'].count()
 height = incidents_year_month_area
@@ -65,25 +65,21 @@ phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program
                         'Average Total Incidents')
 plt.xticks(rotation=90)
 
-# Setting up KDE plot - Day of Week vs. Hours
-x = df['RESPONSEDOW']
-y = df['RESPONSEHOUR']
-phf.kde_plot(x, y, ylabel = 'Hour of the Day',
-            xlabel = 'Day of the Week')
-
-# Setting up KDE plot - Year vs. Month
-x = df['RESPONSEYEAR']
-y = df['month']
-phf.kde_plot(x, y, ylabel = 'Month(January - December)',
-            xlabel = 'Year (2015-2018)')
-
 
 if __name__=="__main__":
-# group_yr_prog_area = df.groupby(['RESPONSEYEAR','PROGRAMAREA'])
-# incidents_yr_prog_area = group_yr_prog_area['ID'].count().reset_index()
-# x = incidents_yr_prog_area['PROGRAMAREA']
-# height = incidents_yr_prog_area['ID']
-# fig, ax = plt.subplots()
-# phf.plot_over_datetime(x, height, ax, 'Average Incidents per Program Area (2015-2018)', 'Program Area',
-#                         'Total Incidents (Avg)')
-# ax.set_xticklabels(months)
+
+# Edit MatPlotLib Parameters
+        plt.rcParams.update({'font.size': 20})
+        plt.style.use('ggplot')
+
+# Import data
+        df = pd.read_csv('data/BFD_fire.csv')
+
+        group_month_area = df.groupby(['month','PROGRAMAREA'])
+        incidents_year_month_area = group_month_area['ID'].count()
+        height = incidents_year_month_area
+        x = height.index
+        fig, ax = plt.subplots()
+        phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program Area',
+                        'Average Total Incidents')
+        plt.xticks(rotation=90)

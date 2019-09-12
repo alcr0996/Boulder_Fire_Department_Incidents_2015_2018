@@ -1,13 +1,14 @@
 # Boulder Fire Department - Incident Response 2015-2018
 
-<src="images/BFD_firetruck.jpg")
+<src="folium_maps/folium_header.png")
 
 ## Table of Contents
 
 1. [Overview](#overview)
 2. [Data](#data)
 3. [First Glance](#first-glance)
-4. [What now?](#what-now?)
+4. [When are incidents occurring?](#when-are-incidents-occurring?)
+5. [What now?](#what-now?)
 
 
 ## Overview
@@ -34,10 +35,15 @@ When the incidents were viewed by month, an interesting pattern appeared.
 
 <src="images/Incidents_per_Month_Averaged.png>
 
+## When are incidents occurring?
+
 ## What now?
 
 I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing.
 
 <src="images/kde_plot_DoW_Year.png>
 
-With this kernel density estimation (KDE) figure, I was able to confirm that the August-October are the months of the year that BFD gets the most calls. So what are those incidents that are inflating those months?
+With this kernel density estimation (KDE) figure, I was able to confirm that the August-October are the months of the year that BFD tends to get the most calls. So what are those incidents that are inflating those months and where are they occurring?
+
+
+
