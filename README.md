@@ -61,11 +61,17 @@ Instead of trying to use the provided latitude and longitude for each incident, 
 
 <img alt="BFD_heatmap" src='images/BFD_heatmap.png' width=600>
 
-This map has all incidents from 2015-2018 plotted. While you cannot interact with it here, the file has been included within the folium_maps folder of this repository.
+This map has all incidents from 2015-2018 plotted. While you cannot interact with it here, the file has been included within the folium_maps folder of this repository, and can be downloaded and ran locally.
 
 What it is demonstrating is that while the BFD clearly responds to incidents all over Boulder, the areas of highest concentration are in the general downtown vicinity, centered around Pearl Street, around the University of Colorado at Boulder and nearby college housing, and with a few other notable intersections along 28th St., 30th St., and Broadway Ave.
 
+To get a better idea of where the increased volume of incidents is occurring dur August-October, I created a time series heat map, with each interval being a month.
 
+If you take the time to download the time series and run it, what you will notice is that starting in August, the area surrounding the university has a noticeable uptick in incidents as demonstrated by this image.
 
+<img alt="BFD_heatmap timeseries gif" src='images/heat_map_time_series.gif' width=600>
 
+### October
+<img alt="BFD_heatmap timeseries" src='images/time_series_capture.png' width=600>
 
+This appears to indicate that the increase in incidents witnessed throughout the Fall coincides with the university being back in session, and perhaps that students are returning to town.

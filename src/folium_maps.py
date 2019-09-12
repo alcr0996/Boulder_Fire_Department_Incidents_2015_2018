@@ -121,7 +121,7 @@ map5 = folium.Map(location=boulder_coords, tiles='CartoDB positron', zoom_start=
 HeatMap(locationlist, min_opacity=0.2,
                    max_val=float(60),
                    radius=4, blur=2, 
-                   max_zoom=1, ).add_to(map5)
+                   max_zoom=1 ).add_to(map5)
 
 map5.save('BFD_heatmap.html')
 # map5
@@ -129,8 +129,8 @@ map5.save('BFD_heatmap.html')
 # Prepping a heat map with TimeSeries
 # List of list of lists
 heat_data_list = [[[row['lat'],row['long']] for index, 
-              row in inc[inc['month'] == i].iterrows()] 
-             for i in range(1,13)]
+                row in inc[inc['month'] == i].iterrows()] 
+                for i in range(1,13)]
 
 map6 = folium.Map(location=boulder_coords, tiles='CartoDB positron', zoom_start=13)
 hm = fp.HeatMapWithTime(heat_data_list, min_opacity=0.2, 
@@ -138,3 +138,32 @@ hm = fp.HeatMapWithTime(heat_data_list, min_opacity=0.2,
 hm.add_to(map6)
 
 hm.save('hmap_timeseries.html')
+
+def folium_map
+
+
+
+
+
+
+
+
+
+
+def folium_heatmap(map_object, location, data,
+                 tiles='CartoDB positron', zoom_start=11,
+                 min_opacity=0.2, radius=4, blur=2, 
+                 max_zoom=1):
+"""
+map_object: name of the map you want to instantiate
+location: coordinates you want the instantiated object to start on
+data: list of lists of latitude and longitude data
+"""
+    map_object = folium.Map(location=location,
+                             tiles=tiles, zoom_start=zoom_start)
+    HeatMap(locationlist, min_opacity=min_opacity,
+                   max_val=float(60),
+                   radius=radius, blur=blur, 
+                   max_zoom=max_zoom ).add_to(map_object)
+    name = str(map_object)
+    map_object.save(name + '.html')
