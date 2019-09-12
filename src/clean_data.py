@@ -70,10 +70,12 @@ def incident_year(df):
         return 'gray'
 df["year_color"] = df.apply(incident_year, axis=1)
 
-# Create Datetime column to use as index and create month column
+# Create Datetime column to use as index and create day and month column
 df['Datetime'] = pd.to_datetime(df['RESPONSEDATE'])
 df = df.set_index('Datetime')
 df["month"] = df['RESPONSEDATE'].map(lambda x: x.month)
+df["day"] = df['Datetime'].map(lambda x: x.day)
+
 
 
 # Add quarters for year
