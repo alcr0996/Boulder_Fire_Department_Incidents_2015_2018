@@ -32,7 +32,7 @@ def line_plot(x, y, ax, title=False, xlabel=False, ylabel=False):
 # Plotting function built for time interval vs. response time
 def kde_plot(x, y, xlabel=False, ylabel=False):
     ax = sns.set(style="ticks")
-    a = sns.jointplot(x, y, kind="kde", color='brown',xlim=(-.5,6.5), ylim=(-.5,23.5))
+    a = sns.jointplot(x, y, kind="kde", color='brown', ylim=(-.5,12.5))
     a.set_axis_labels(xlabel, ylabel, fontsize=18)
     name = 'kde_plot'
     plt.tight_layout()
