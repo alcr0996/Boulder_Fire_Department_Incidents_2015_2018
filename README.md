@@ -1,6 +1,6 @@
 # Boulder Fire Department - Incident Response 2015-2018
+![Incidents around Boulder, CO](folium_maps/folium_header.png)
 
-<src="folium_maps/folium_header.png">
 
 ## Table of Contents
 
@@ -25,25 +25,40 @@ For this study, data concerning ambulance responses, data from 2019, as well as 
 
 Over the course of the four years investigated, the BFD responded to nearly 51.5 thousand incidents, which broke down nearly equally by year.
 
-<src="images/Incidents_per_Year.png">
+<img alt="Incidents per year" src='images/Incidents_per_Year.png' width=400> 
 
 Of those incidents, the vast majority were responses to Emergency Medical Service (EMS) calls.
 
-<src="images/Average_Incidents_per_Program_Area.png">
+<img alt="Incidents per program area" src='images/Average_Incidents_per_Program_Area.png' width=400> 
+
+## When are incidents occurring?
+
+<img alt="KDE of hour and day" src='images/kde_plot_DoW_Year.png' width=400> 
 
 When the incidents were viewed by month, an interesting pattern appeared.
 
-<src="images/Incidents_per_Month_Averaged.png">
-
-## When are incidents occurring?
+<img alt="Incidents per month averaged" src='images/Incidents_per_Month_Averaged.png' width=400>
 
 ## What now?
 
 I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing.
 
-<src="images/kde_plot_DoW_Year.png">
+<img alt="Results of the complete segmentation of a single brain" src='images/kde_plot_Month_Year.png' width=400> 
 
 With this kernel density estimation (KDE) figure, I was able to confirm that the August-October are the months of the year that BFD tends to get the most calls. So what are those incidents that are inflating those months and where are they occurring?
+
+While this next figure has a lot going on, it demonstrates that during the months of August-October, you can see the same pattern when looking at EMS calls that was witnessed in the prior Incidents per Month figure.
+
+<img alt="Average_Incidents_per_Program_area.png" src='Average_Incidents_per_Program_area.png' width=400> 
+
+Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same.
+
+### So where are these extra incidents occurring?
+
+Instead of trying to pin down exact latitude and longitudes, a heat map seemed appropriate for this task.
+
+<img alt="BFD_heatmap" src='BFD_hmap.html' width=400> 
+
 
 
 
