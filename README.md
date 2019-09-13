@@ -8,7 +8,8 @@
 2. [Data](#data)
 3. [First Glance](#first-glance)
 4. [When are incidents occurring?](#when-are-incidents-occurring?)
-5. [What now?](#what-now?)
+5. [What is causing the increase in the Fall?](#what-is-causing-the-increase-in-the-fall?)
+6. [What next?](#what-next?)
 
 
 ## Overview
@@ -47,7 +48,7 @@ Next I wanted to view the the incidents per month to ascertain if there were mor
 
 <img alt="Incidents per month averaged" src='images/incidents_per_month_averaged.png' width=400>
 
-## What now?
+## What is causing the increase in the Fall?
 
 I was curious what was causing that spike from August-October, and wanted to confirm what I was seeing. With this next KDE, I was able to confirm that August-October are the months of the year that BFD tends to get the most calls.
 
@@ -91,3 +92,10 @@ If you take the time to download the time series and run it, what you will notic
 This appears to indicate that the increase in incidents witnessed throughout the Fall coincides with the university being back in session, and perhaps that students are returning to town.
 
 <img alt="BFD_heatmap timeseries gif" src='images/heatmap_time_series.gif' width=600>
+
+## What next?
+
+I would like to bring in population data and weather data for each year to attempt to get a better sense of incidents/year, as well as how weather influences incident rate. I would also like to continue to investigate the increase in incidents from August-October. The next questions I would like to address if possible are:
+- Does precipitation increase incident frequency? If so, try to make a comparison of rain vs. snow.
+- Is the increase in incidents related to students returning to town (i.e. a sudden increase in the population)?
+- When are those "extra" incidents occurring over the 24hr day? (e.g. Does the frequency per hour of the day change between Aug-Oct?)
