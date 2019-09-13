@@ -7,13 +7,11 @@ import plotting_help_functions as phf
 
 # Edit MatPlotLib Parameters
 plt.rcParams.update({'font.size': 20})
-plt.style.use('ggplot')
 
 # Import data
 df = pd.read_csv('data/BFD_fire.csv')
 
-days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
-        'Thursday', 'Friday', 'Saturday']
+# 
 
 # Setting up Year vs Total Incidents Plot
 group_year = df.groupby('RESPONSEYEAR')
@@ -56,6 +54,7 @@ phf.bar_plot(x, height, ax, 'Percent Incidents per Program Area', 'Month/Program
 plt.xticks(rotation=90)
 
 # Count Program area per month
+df_count = df[(df['PROGRAMAREA'] == 'EMS') | (df['PROGRAMAREA'] == 'Fire')]
 group_month_area = df.groupby(['month','PROGRAMAREA'])
 incidents_year_month_area = group_month_area['ID'].count()
 height = incidents_year_month_area
@@ -65,8 +64,29 @@ phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program
                         'Average Total Incidents')
 plt.xticks(rotation=90)
 
+# Count Program area per month w/ only EMS & Fire
+df_EMS_Fire = df[(df['PROGRAMAREA'] == 'EMS') | (df['PROGRAMAREA'] == 'Fire')]
+group_month_area = df_EMS_Fire.groupby(['month','PROGRAMAREA'])
+incidents_year_month_area = group_month_area['ID'].count()
+height = incidents_year_month_area
+x = height.index
+fig, ax = plt.subplots()
+phf.bar_plot(x, height, ax, 'Average Incidents per Program Area - EMS & Fire', 'Month/Program Area',
+                        'Average Total Incidents')
+plt.xticks(rotation=90)
+
 
 if __name__=="__main__":
+        plt.rcParams.update({'font.size': 20})
+        df_EMS_Fire = df[(df['PROGRAMAREA'] == 'EMS') | (df['PROGRAMAREA'] == 'Fire')]
+        group_month_area = df_EMS_Fire.groupby(['month','PROGRAMAREA']) 
+        incidents_year_month_area = group_month_area['ID'].count()
+        height = incidents_year_month_area
+        x = height.index
+        fig, ax = plt.subplots()
+        phf.bar_plot(x, height, ax, 'Average Incidents per Program Area', 'Month/Program Area',
+                        'Average Total Incidents')
+        plt.xticks(rotation=90)
 
 # Edit MatPlotLib Parameters
         # plt.rcParams.update({'font.size': 20})

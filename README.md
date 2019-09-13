@@ -51,13 +51,13 @@ So what are those incidents that are inflating those months and where are they o
 
 While this next figure has a lot going on, it demonstrates that during the months of August-October, you can see the same pattern when looking at EMS calls that was witnessed in the prior Incidents per Month figure. This led me to believe that during the months in question, EMS incidents were going to make up a larger percentage of total incidents.
 
-<img alt="Average Incidents per Program_area" src='images/average_incidents_per_program.png' width=600> 
+<img alt="Average Incidents per Program_area" src='images/average_incidents_per_program_area_ems_fire.png' width=600> 
 
 Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same as demonstrated in another figure not included here.
 
 ### So where are these extra incidents occurring?
 
-Instead of trying to use the provided latitude and longitude for each incident, and taking the time to reseach each closest intersection or landmark, I decided to utilize a heat map illuminate the answer.
+Instead of trying to use the provided latitude and longitude for each incident, and taking the time to reseach each closest intersection or landmark, I decided to utilize a heat map to illuminate the answer.
 
 <img alt="BFD_heatmap" src='images/BFD_heatmap.png' width=600>
 
@@ -65,13 +65,16 @@ This map has all incidents from 2015-2018 plotted. While you cannot interact wit
 
 What it is demonstrating is that while the BFD clearly responds to incidents all over Boulder, the areas of highest concentration are in the general downtown vicinity, centered around Pearl Street, around the University of Colorado at Boulder and nearby college housing, and with a few other notable intersections along 28th St., 30th St., and Broadway Ave.
 
-To get a better idea of where the increased volume of incidents is occurring dur August-October, I created a time series heat map, with each interval being a month.
+To get a better idea of where the increased volume of incidents is occurring during August-October, I created a time series heat map, with each interval being a month.
 
 If you take the time to download the time series and run it, what you will notice is that starting in August, the area surrounding the university has a noticeable uptick in incidents as demonstrated by this image.
 
-<img alt="BFD_heatmap timeseries gif" src='images/heat_map_time_series.gif' width=600>
+### June
+<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image06.jpg' width=600>
 
 ### October
-<img alt="BFD_heatmap timeseries" src='images/time_series_capture.png' width=600>
+<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image10.jpg' width=600>
 
 This appears to indicate that the increase in incidents witnessed throughout the Fall coincides with the university being back in session, and perhaps that students are returning to town.
+
+<img alt="BFD_heatmap timeseries gif" src='images/heatmap_time_series.gif' width=600>
