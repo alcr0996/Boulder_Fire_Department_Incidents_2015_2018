@@ -11,7 +11,7 @@ def folium_map(map_object, data, zoom_start=11, popup=False, icon=False, color=F
     popup = String information that pops up when clicking on a map marker.
     """
     marker_cluster = fp.MarkerCluster().add_to(map_object)
-    folium.Marker(locationlist).add_to(marker_cluster)
+    folium.Marker(data).add_to(marker_cluster)
     name = str(map_object)
     map_object.save(name + '.html')
 
@@ -43,8 +43,8 @@ def folium_heat_series(map_object, data,
     """
     map_object: The variable name of the map object that you have instantiated.
     data: List of lists of lists of latitude and longitude data
-    e.g. timeseries_data_list = [[[row['lat'],row['long']] for index, 
-             row in inc[inc['month'] == i].iterrows()] 
+    e.g. timeseries_data_list = [[[row['Latitude'],row['Longitude']] for index, 
+             row in DataFramef[DataFrame['column'] == i].iterrows()] 
              for i in range(1,13)]
     """
     fp.HeatMapWithTime(heat_data_list, min_opacity=0.2, 
