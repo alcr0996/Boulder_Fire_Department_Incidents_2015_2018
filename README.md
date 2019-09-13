@@ -35,7 +35,13 @@ Of those incidents, the vast majority were responses to Emergency Medical Servic
 
 I was curious to see when the BFD receives the highest volume of calls over the course of the week. I anticipated seeing a higher concentration of calls from Thursday-Saturday, with noticeable peaks in the evenings. As demonstrated in the following kernal density estimation (KDE), those assumptions do not prove to be true. There is a noticeable trend as the week continues for there to be more incidents in the very early morning (i.e. 12-2AM), but there appears to be a higher concentration of incidents between normal wakeful hours from Sunday-Thursday.
 
-<img alt="KDE of hour and day" src='images/kde_plot_DoW_Year.png' width=500> 
+<img alt="KDE of hour and day" src='images/kde_plot_DoW_Year.png' width=500>
+
+###  How does time of day influence response time?
+
+I then looked at how long it took for the responding unit to depart the station at different times of the day as a measure of response time. For this figure, I only included the incidents where firefighters were responding from a station, and not already on scene of a different incident. No surprise, they took longer to depart during the late morning hours.
+
+<img alt="Response time by hour" src='images/average_response_time_per_hour.png' width=500> 
 
 Next I wanted to view the the incidents per month to ascertain if there were more incidents in any particular season. When investigating monthly incident rates, an interesting pattern appeared.
 
@@ -55,6 +61,13 @@ While this next figure has a lot going on, it demonstrates that during the month
 
 Interestingly, while the EMS calls seem to account for nearly the total increase in incidents witnessed from August-October, the percentage of calls for each response area stay practically the same as demonstrated in another figure not included here.
 
+Per Month Responses by Program Area:
+- EMS ~ 77-80%
+- Fire ~ 16-20%
+- Hazmat ~ 2-3%
+- Rescue ~ 1%
+- Mutual Aid < 1%
+
 ### So where are these extra incidents occurring?
 
 Instead of trying to use the provided latitude and longitude for each incident, and taking the time to reseach each closest intersection or landmark, I decided to utilize a heat map to illuminate the answer.
@@ -70,10 +83,10 @@ To get a better idea of where the increased volume of incidents is occurring dur
 If you take the time to download the time series and run it, what you will notice is that starting in August, the area surrounding the university has a noticeable uptick in incidents as demonstrated by this image.
 
 ### June
-<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image06.jpg' width=600>
+<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image31.jpg' width=600>
 
 ### October
-<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image10.jpg' width=600>
+<img alt="BFD_heatmap timeseries" src='images/folium_images_4_gif/image46.jpg' width=600>
 
 This appears to indicate that the increase in incidents witnessed throughout the Fall coincides with the university being back in session, and perhaps that students are returning to town.
 
